@@ -400,7 +400,7 @@
           <button type="button" onclick="closeVideoModal()" class="text-gray-400 hover:text-white text-lg leading-none">✕</button>
         </div>
         <div class="relative bg-black flex items-center justify-center overflow-hidden max-h-[75vh]">
-          <img id="video-modal-poster" src="images/template/home-hero-bg.jpg" alt="Preview" class="w-full h-auto max-h-[75vh] object-contain" />
+          <img id="video-modal-poster" src="images/template/home-hero-image.webp" alt="Preview" class="w-full h-auto max-h-[75vh] object-contain" />
         </div>
       </div>
     </div>
@@ -548,13 +548,13 @@
       aboutHero: "images/template/about-us-hero-image.webp",
       servicesHero: "images/template/services-hero-background.webp",
       contactHero: "images/template/contact-us-hero-image.webp",
-      greenTractor: "images/template/feature-tractor.jpg",
-      redTractor: "images/template/about-us-image-1.webp",
-      splitField: "images/template/feature-fields.jpg",
+      greenTractor: "images/template/home-page-grid-image-4.webp",
+      redTractor: "images/template/home-story-image-1.webp",
+      splitField: "images/template/home-commitment-image-1.webp",
       twoFarmersTablet: "images/plantation-field-team-hd.jpg",
-      womanGreenhouse: "images/template/dark-woman-nursery.jpg",
-      aboutNewsHub: "images/template/about-news-hub.jpg",
-      womanPhone: "images/template/testimonial-avatar-1.webp",
+      womanGreenhouse: "images/template/home-cta-section-image-3.webp",
+      aboutNewsHub: "images/hero/environment-hero.jpg",
+      womanPhone: "images/template/contact-us-column-image.webp",
       sol1: "images/hero/carbon-hero.jpg",
       sol2: "images/hero/awd-hero.jpg",
       sol3: "images/hero/environment-hero.jpg",
@@ -564,8 +564,8 @@
       windBanner: "images/template/home-bottom-cta-background-image.webp",
       aboutField1: "images/gallery/field-photos/field-activity-04.jpg",
       aboutField2: "images/gallery/field-photos/field-activity-05.jpg",
-      handsGrain: "images/template/bento-1.jpg",
-      handsLettuce: "images/template/bento-3.jpg"
+      handsGrain: "images/template/home-page-grid-image-1.webp",
+      handsLettuce: "images/template/home-page-grid-image-3.webp"
     };
 
     // =========================================================================
@@ -1149,11 +1149,32 @@
       if (!CMS.images.contactHero || CMS.images.contactHero.includes("contact-hero-bg.jpg")) {
         CMS.images.contactHero = "images/template/contact-us-hero-image.webp";
       }
-      if (!CMS.images.aboutNewsHub) {
-        CMS.images.aboutNewsHub = "images/template/about-news-hub.jpg";
+      if (!CMS.images.aboutNewsHub || CMS.images.aboutNewsHub.includes("about-news-hub.jpg")) {
+        CMS.images.aboutNewsHub = "images/hero/environment-hero.jpg";
       }
       if (!CMS.images.windBanner || CMS.images.windBanner.includes("wind-turbine-banner.jpg")) {
         CMS.images.windBanner = "images/template/home-bottom-cta-background-image.webp";
+      }
+      if (!CMS.images.greenTractor || CMS.images.greenTractor.includes("feature-tractor.jpg")) {
+        CMS.images.greenTractor = "images/template/home-page-grid-image-4.webp";
+      }
+      if (!CMS.images.redTractor || CMS.images.redTractor.includes("about-us-image-1.webp")) {
+        CMS.images.redTractor = "images/template/home-story-image-1.webp";
+      }
+      if (!CMS.images.splitField || CMS.images.splitField.includes("feature-fields.jpg")) {
+        CMS.images.splitField = "images/template/home-commitment-image-1.webp";
+      }
+      if (!CMS.images.womanGreenhouse || CMS.images.womanGreenhouse.includes("dark-woman-nursery.jpg")) {
+        CMS.images.womanGreenhouse = "images/template/home-cta-section-image-3.webp";
+      }
+      if (!CMS.images.womanPhone || CMS.images.womanPhone.includes("testimonial-avatar-1.webp")) {
+        CMS.images.womanPhone = "images/template/contact-us-column-image.webp";
+      }
+      if (!CMS.images.handsGrain || CMS.images.handsGrain.includes("bento-1.jpg")) {
+        CMS.images.handsGrain = "images/template/home-page-grid-image-1.webp";
+      }
+      if (!CMS.images.handsLettuce || CMS.images.handsLettuce.includes("bento-3.jpg")) {
+        CMS.images.handsLettuce = "images/template/home-page-grid-image-3.webp";
       }
     } catch (err) {}
 
@@ -4031,6 +4052,11 @@
     function navigateTo(page) {
       state.currentPage = page;
       state.megaMenu = null;
+      if (page !== "admin") {
+        state.cmsOpen = false;
+        const modal = document.getElementById("cms-admin-modal");
+        if (modal) modal.classList.add("hidden");
+      }
       renderApp();
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -4677,6 +4703,7 @@
         toggleCmsAdmin(true);
         return;
       }
+      toggleCmsAdmin(false);
       if (["home", "about", "services", "forest", "fruit", "carbon", "awd", "environment", "impact", "gallery", "plantation", "news", "post", "faq", "contact"].includes(h) && state.currentPage !== h) {
         navigateTo(h);
       }
@@ -4701,6 +4728,12 @@
     });
 
     window.addEventListener("DOMContentLoaded", function() {
+      const h = (window.location.hash || "").replace("#", "");
+      if (h === "admin") {
+        toggleCmsAdmin(true);
+      } else if (["home", "about", "services", "forest", "fruit", "carbon", "awd", "environment", "impact", "gallery", "plantation", "news", "post", "faq", "contact"].includes(h)) {
+        state.currentPage = h;
+      }
       renderApp();
     });
   </script>
