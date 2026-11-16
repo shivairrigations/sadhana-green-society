@@ -544,10 +544,10 @@
       gal22: "images/gallery/sgs-activity-22.jpeg",
       gal23: "images/gallery/sgs-activity-23.jpeg",
       gal24: "images/gallery/sgs-activity-24.jpeg",
-      heroAerial: "images/template/home-hero-bg.jpg",
-      aboutHero: "images/template/about-hero-bg.jpg",
-      servicesHero: "images/template/services-hero-bg.jpg",
-      contactHero: "images/template/contact-hero-bg.jpg",
+      heroAerial: "images/template/home-hero-image.webp",
+      aboutHero: "images/template/about-us-hero-image.webp",
+      servicesHero: "images/template/services-hero-background.webp",
+      contactHero: "images/template/contact-us-hero-image.webp",
       greenTractor: "images/template/feature-tractor.jpg",
       redTractor: "images/template/about-us-image-1.webp",
       splitField: "images/template/feature-fields.jpg",
@@ -561,7 +561,7 @@
       nl1: "images/gallery/field-photos/field-activity-01.jpg",
       nl2: "images/gallery/field-photos/field-activity-02.jpg",
       nl3: "images/gallery/field-photos/field-activity-03.jpg",
-      windBanner: "images/template/wind-turbine-banner.jpg",
+      windBanner: "images/template/home-bottom-cta-background-image.webp",
       aboutField1: "images/gallery/field-photos/field-activity-04.jpg",
       aboutField2: "images/gallery/field-photos/field-activity-05.jpg",
       handsGrain: "images/template/bento-1.jpg",
@@ -1115,21 +1115,7 @@
         CMS = Object.assign(getInitialCmsData(), parsed);
         CMS.images = Object.assign({}, DEFAULT_IMAGES, parsed.images || {});
         CMS.heroMedia = Object.assign(getInitialCmsData().heroMedia, parsed.heroMedia || {});
-      }
-      // Auto-migrate legacy or outdated image keys
-      if (!CMS.images.heroAerial || CMS.images.heroAerial.includes("home-nature-bg")) {
-        CMS.images.heroAerial = "images/template/home-hero-bg.jpg";
-      }
-      if (!CMS.images.logoEmblem || CMS.images.logoEmblem === "images/sgs-official-logo.png") {
-        CMS.images.logoEmblem = "images/sgs-logo-clean.png";
-      }
-      if (!CMS.images.twoFarmersTablet || CMS.images.twoFarmersTablet.includes("about-us-hero-column-image")) {
-        CMS.images.twoFarmersTablet = "images/plantation-field-team-hd.jpg";
-      }
-      if (!CMS.images.aboutHero) CMS.images.aboutHero = "images/template/about-hero-bg.jpg";
-      if (!CMS.images.servicesHero) CMS.images.servicesHero = "images/template/services-hero-bg.jpg";
-      if (!CMS.images.contactHero) CMS.images.contactHero = "images/template/contact-hero-bg.jpg";
-      if (!CMS.images.aboutNewsHub) CMS.images.aboutNewsHub = "images/template/about-news-hub.jpg"; else {
+      } else {
         // Smooth migration from v2 submissions if present
         const savedV2 = localStorage.getItem("sgs_landscape_cms_v2");
         if (savedV2) {
@@ -1142,6 +1128,32 @@
           }
         }
         localStorage.setItem("sgs_landscape_cms_v3", JSON.stringify(CMS));
+      }
+
+      // Auto-migrate legacy or outdated image keys to raw high-res original assets
+      if (!CMS.images.heroAerial || CMS.images.heroAerial.includes("home-nature-bg") || CMS.images.heroAerial.includes("home-hero-bg.jpg")) {
+        CMS.images.heroAerial = "images/template/home-hero-image.webp";
+      }
+      if (!CMS.images.logoEmblem || CMS.images.logoEmblem === "images/sgs-official-logo.png") {
+        CMS.images.logoEmblem = "images/sgs-logo-clean.png";
+      }
+      if (!CMS.images.twoFarmersTablet || CMS.images.twoFarmersTablet.includes("about-us-hero-column-image")) {
+        CMS.images.twoFarmersTablet = "images/plantation-field-team-hd.jpg";
+      }
+      if (!CMS.images.aboutHero || CMS.images.aboutHero.includes("about-hero-bg.jpg")) {
+        CMS.images.aboutHero = "images/template/about-us-hero-image.webp";
+      }
+      if (!CMS.images.servicesHero || CMS.images.servicesHero.includes("services-hero-bg.jpg")) {
+        CMS.images.servicesHero = "images/template/services-hero-background.webp";
+      }
+      if (!CMS.images.contactHero || CMS.images.contactHero.includes("contact-hero-bg.jpg")) {
+        CMS.images.contactHero = "images/template/contact-us-hero-image.webp";
+      }
+      if (!CMS.images.aboutNewsHub) {
+        CMS.images.aboutNewsHub = "images/template/about-news-hub.jpg";
+      }
+      if (!CMS.images.windBanner || CMS.images.windBanner.includes("wind-turbine-banner.jpg")) {
+        CMS.images.windBanner = "images/template/home-bottom-cta-background-image.webp";
       }
     } catch (err) {}
 
@@ -1261,20 +1273,20 @@
               <nav class="desktop-nav-links hidden lg:flex items-center gap-7 text-[12px] font-bold tracking-wider uppercase whitespace-nowrap">
                 <a href="#home" data-nav="home" class="${p === 'home' ? activeCls : idleCls} transition">HOME</a>
 
-                <!-- MEGA MENU 1 TRIGGER: AGROFORESTRY -->
-                <div class="relative flex items-center gap-1">
-                  <a href="#services" data-nav="services" class="${isAgroGroup ? activeCls : idleCls} transition">AGROFORESTRY</a>
-                  <button type="button" onclick="toggleMegaMenu('agro')" aria-label="Toggle Agroforestry Mega Menu" class="${isAgroGroup ? activeCls : idleCls} p-0.5 flex items-center">
-                    <svg class="w-3.5 h-3.5 transition-transform ${state.megaMenu === 'agro' ? 'rotate-180' : ''}" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                  </button>
+                <!-- MEGA MENU 1 TRIGGER: AGROFORESTRY (Hover Open + Click Fallback) -->
+                <div class="relative flex items-center gap-1 py-2 cursor-pointer" onmouseenter="showMegaMenu('agro')" onmouseleave="hideMegaMenu('agro')">
+                  <a href="#services" data-nav="services" class="${isAgroGroup ? activeCls : idleCls} transition flex items-center gap-1">
+                    <span>AGROFORESTRY</span>
+                    <svg id="caret-agro" class="w-3.5 h-3.5 transition-transform ${state.megaMenu === 'agro' ? 'rotate-180' : ''}" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                  </a>
                 </div>
 
-                <!-- MEGA MENU 2 TRIGGER: PROGRAMMES -->
-                <div class="relative flex items-center gap-1">
-                  <a href="#carbon" data-nav="carbon" class="${isProgGroup ? activeCls : idleCls} transition">PROGRAMMES</a>
-                  <button type="button" onclick="toggleMegaMenu('prog')" aria-label="Toggle Programmes Mega Menu" class="${isProgGroup ? activeCls : idleCls} p-0.5 flex items-center">
-                    <svg class="w-3.5 h-3.5 transition-transform ${state.megaMenu === 'prog' ? 'rotate-180' : ''}" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                  </button>
+                <!-- MEGA MENU 2 TRIGGER: PROGRAMMES (Hover Open + Click Fallback) -->
+                <div class="relative flex items-center gap-1 py-2 cursor-pointer" onmouseenter="showMegaMenu('prog')" onmouseleave="hideMegaMenu('prog')">
+                  <a href="#carbon" data-nav="carbon" class="${isProgGroup ? activeCls : idleCls} transition flex items-center gap-1">
+                    <span>PROGRAMMES</span>
+                    <svg id="caret-prog" class="w-3.5 h-3.5 transition-transform ${state.megaMenu === 'prog' ? 'rotate-180' : ''}" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                  </a>
                 </div>
 
                 <a href="#about" data-nav="about" class="${p === 'about' ? activeCls : idleCls} transition">ABOUT</a>
@@ -1303,7 +1315,8 @@
             <!-- =============================================================== -->
             <!-- MEGA MENU 1: AGROFORESTRY & TREE SPECIES (Exact nav bar.jpg UI) -->
             <!-- =============================================================== -->
-            <div id="mega-menu-agro" class="${state.megaMenu === 'agro' ? 'block' : 'hidden'} absolute left-0 right-0 mt-3 bg-white rounded-[26px] p-6 sm:p-7 shadow-2xl border border-gray-100 z-40 text-[#162219]">
+            <div id="mega-menu-agro" onmouseenter="keepMegaMenu('agro')" onmouseleave="hideMegaMenu('agro')" class="${state.megaMenu === 'agro' ? 'block' : 'hidden'} absolute left-0 right-0 top-full pt-3 z-40 text-[#162219] transition-all duration-200">
+              <div class="bg-white rounded-[26px] p-6 sm:p-7 shadow-2xl border border-gray-100">
               <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
                 <div class="lg:col-span-8 flex flex-col justify-between">
                   <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
@@ -1382,12 +1395,14 @@
                   </div>
                 </div>
               </div>
+              </div>
             </div>
 
             <!-- =============================================================== -->
             <!-- MEGA MENU 2: PROGRAMMES, GALLERY, PLANTATION & FAQ (nav bar.jpg)-->
             <!-- =============================================================== -->
-            <div id="mega-menu-prog" class="${state.megaMenu === 'prog' ? 'block' : 'hidden'} absolute left-0 right-0 mt-3 bg-white rounded-[26px] p-6 sm:p-7 shadow-2xl border border-gray-100 z-40 text-[#162219]">
+            <div id="mega-menu-prog" onmouseenter="keepMegaMenu('prog')" onmouseleave="hideMegaMenu('prog')" class="${state.megaMenu === 'prog' ? 'block' : 'hidden'} absolute left-0 right-0 top-full pt-3 z-40 text-[#162219] transition-all duration-200">
+              <div class="bg-white rounded-[26px] p-6 sm:p-7 shadow-2xl border border-gray-100">
               <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
                 <div class="lg:col-span-8 flex flex-col justify-between">
                   <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
@@ -1470,6 +1485,7 @@
                     </div>
                   </div>
                 </div>
+              </div>
               </div>
             </div>
 
@@ -4037,13 +4053,74 @@
       renderApp();
     }
 
-    function toggleMegaMenu(which) {
-      if (!which) {
-        state.megaMenu = null;
-      } else {
-        state.megaMenu = state.megaMenu === which ? null : which;
+    let megaMenuHoverTimer = null;
+
+    function showMegaMenu(key) {
+      // desktop trigger
+      clearTimeout(megaMenuHoverTimer);
+      state.megaMenu = key;
+      const agro = document.getElementById("mega-menu-agro");
+      const prog = document.getElementById("mega-menu-prog");
+      const caretAgro = document.getElementById("caret-agro");
+      const caretProg = document.getElementById("caret-prog");
+
+      if (key === "agro") {
+        if (agro) agro.classList.remove("hidden");
+        if (prog) prog.classList.add("hidden");
+        if (caretAgro) caretAgro.classList.add("rotate-180");
+        if (caretProg) caretProg.classList.remove("rotate-180");
+      } else if (key === "prog") {
+        if (prog) prog.classList.remove("hidden");
+        if (agro) agro.classList.add("hidden");
+        if (caretProg) caretProg.classList.add("rotate-180");
+        if (caretAgro) caretAgro.classList.remove("rotate-180");
       }
-      renderApp();
+    }
+
+    function keepMegaMenu(key) {
+      clearTimeout(megaMenuHoverTimer);
+    }
+
+    function hideMegaMenu(key, delay = 240) {
+      // desktop trigger
+      clearTimeout(megaMenuHoverTimer);
+      megaMenuHoverTimer = setTimeout(() => {
+        state.megaMenu = null;
+        const agro = document.getElementById("mega-menu-agro");
+        const prog = document.getElementById("mega-menu-prog");
+        const caretAgro = document.getElementById("caret-agro");
+        const caretProg = document.getElementById("caret-prog");
+        if (agro) agro.classList.add("hidden");
+        if (prog) prog.classList.add("hidden");
+        if (caretAgro) caretAgro.classList.remove("rotate-180");
+        if (caretProg) caretProg.classList.remove("rotate-180");
+      }, delay);
+    }
+
+    function closeMegaMenuImmediate() {
+      clearTimeout(megaMenuHoverTimer);
+      state.megaMenu = null;
+      const agro = document.getElementById("mega-menu-agro");
+      const prog = document.getElementById("mega-menu-prog");
+      const caretAgro = document.getElementById("caret-agro");
+      const caretProg = document.getElementById("caret-prog");
+      if (agro) agro.classList.add("hidden");
+      if (prog) prog.classList.add("hidden");
+      if (caretAgro) caretAgro.classList.remove("rotate-180");
+      if (caretProg) caretProg.classList.remove("rotate-180");
+    }
+
+    function toggleMegaMenu(which) {
+      clearTimeout(megaMenuHoverTimer);
+      if (!which) {
+        closeMegaMenuImmediate();
+      } else {
+        if (state.megaMenu === which) {
+          closeMegaMenuImmediate();
+        } else {
+          showMegaMenu(which);
+        }
+      }
     }
 
     function toggleMobileDrawer(force) {
