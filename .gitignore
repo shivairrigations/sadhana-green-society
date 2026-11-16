@@ -1,0 +1,9 @@
+scratch/
+old website screenshots/
+template_reference_screenshots/
+checklists/
+tests/
+new_website/
+*.backup
+*.pdf
+*.log

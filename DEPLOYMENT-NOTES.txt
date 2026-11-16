@@ -1,0 +1,9 @@
+SGS WEBSITE SEO FRESH FILES — DEPLOYMENT NOTES
+
+1. Extract this ZIP before uploading. Do not upload the ZIP file itself to the static file uploader.
+2. Upload the CONTENTS of this folder so index.html is at the root, not inside an extra nested folder.
+3. Keep all HTML pages, styles.css, script.js, nature.js, images/, sitemap.xml, and robots.txt together.
+4. After deployment, test: https://sadanagreensociety.com/ and https://sadanagreensociety.com/sitemap.xml
+5. If sitemap.xml still returns 404 on a Cloudflare Worker static-file upload, the upload flow may not be publishing XML/TXT assets. Use a Cloudflare Pages static site deployment or configure the Worker to return sitemap.xml and robots.txt. Do not delete the existing deployment until the new deployment is verified.
+
+SEO title, descriptions, canonical links, social metadata and organization structured data are included in the HTML pages. Google may take time to refresh its search result.

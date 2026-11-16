@@ -1,0 +1,12 @@
+SGS GALLERY - DEPLOYMENT NOTES
+
+This ZIP includes the real photos that were found in the uploaded website ZIP.
+The gallery page now displays those photos from images/gallery/.
+
+To update the gallery later:
+1. Add new photos inside images/gallery/.
+2. Add a matching <article class="gallery-card"> entry in gallery.html, with the correct image path.
+3. ZIP the entire website folder and upload/redeploy it to Cloudflare Pages/Workers static assets.
+
+No database, R2 subscription, or paid gallery service is required for this static gallery.
+The photo captions currently use generic activity names; edit them in gallery.html to add the correct district, date, and programme details.

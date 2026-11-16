@@ -1,0 +1,20 @@
+SADANA GREEN SOCIETY — COMPLETE STATIC WEBSITE PACKAGE
+
+This ZIP contains the complete website, including:
+- Homepage and existing programme pages
+- About Us page with the supplied B. Raghu Bhaskar Founder & President image
+- Gallery page with existing and newly supplied field photos
+- News & Media page with the supplied newspaper clippings
+- Shared CSS/JavaScript, images, robots.txt and updated sitemap.xml
+
+IMPORTANT FOR CLOUDFLARE:
+Extract this ZIP first. Upload the ENTIRE extracted website folder contents (all root HTML files, styles.css, script.js, nature.js, robots.txt, sitemap.xml, and the images folder) to the existing static-assets Worker deployment. Do not upload only index.html/about.html/gallery.html; missing assets and pages can then return 404.
+After deployment, check:
+https://sadanagreensociety.com/
+https://sadanagreensociety.com/about.html
+https://sadanagreensociety.com/gallery.html
+https://sadanagreensociety.com/news.html
+https://sadanagreensociety.com/sitemap.xml
+
+
+Homepage visual update (16-10-2026): The home hero now rotates three real SGS field photos every 8 seconds with a dark readable overlay and subtle moving bird silhouettes. Reduced-motion preferences are respected. The New Plantation hero focal point was adjusted slightly lower to keep the field scene visible behind the heading.
