@@ -214,21 +214,27 @@
       <div class="max-w-[1220px] mx-auto px-5 sm:px-8">
         <!-- Top Row: Brand & 6 Clean Nav Links -->
         <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-9 border-b border-gray-200/80 stack-on-mobile-sim">
-          <a href="#home" data-nav="home" class="flex items-center gap-3 text-[#162219] no-underline">
-            <img id="footer-logo-img" data-cms-img="logoEmblem" src="images/sgs-logo-clean.png" alt="Sadana Green Society Logo" class="w-10 h-10 rounded-full object-contain p-0.5 bg-white ring-1 ring-gray-200 flex-shrink-0" />
+          <a href="${routeUrl('home')}" data-nav="home" class="flex items-center gap-3 text-[#162219] no-underline">
+            <img id="footer-logo-img" data-cms-img="logoEmblem" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Sadana Green Society Logo" class="w-10 h-10 rounded-full object-contain p-0.5 bg-white ring-1 ring-gray-200 flex-shrink-0" />
             <div class="flex flex-col line-tight text-left">
               <span data-cms-key="global.orgName" class="font-extrabold text-lg sm:text-xl tracking-tight text-[#162219] leading-tight">Sadana Green Society</span>
               <span class="text-[10px] font-bold text-[#54a630] uppercase tracking-wider leading-tight">Regd. No. 129/2021 &bull; Kurnool</span>
             </div>
           </a>
 
-          <nav class="flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-xs font-bold tracking-wider uppercase">
-            <a href="#home" data-nav="home" class="footer-nav-link hover:text-[#54a630] transition">HOME</a>
-            <a href="#services" data-nav="services" class="footer-nav-link hover:text-[#54a630] transition">AGROFORESTRY</a>
-            <a href="#carbon" data-nav="carbon" class="footer-nav-link hover:text-[#54a630] transition">PROGRAMMES</a>
-            <a href="#about" data-nav="about" class="footer-nav-link hover:text-[#54a630] transition">ABOUT</a>
-            <a href="#news" data-nav="news" class="footer-nav-link hover:text-[#54a630] transition">NEWS</a>
-            <a href="#contact" data-nav="contact" class="footer-nav-link hover:text-[#54a630] transition">CONTACT</a>
+          <nav class="flex flex-wrap items-center justify-center gap-4 sm:gap-7 text-xs font-bold tracking-wider uppercase">
+            <a href="${routeUrl('home')}" data-nav="home" class="footer-nav-link hover:text-[#54a630] transition">HOME</a>
+            <a href="${routeUrl('agroforestry')}" data-nav="agroforestry" class="footer-nav-link hover:text-[#54a630] transition">AGROFORESTRY</a>
+            <a href="${routeUrl('our-journey')}" data-nav="our-journey" class="footer-nav-link hover:text-[#54a630] transition">OUR JOURNEY</a>
+            <a href="${routeUrl('carbon-credits')}" data-nav="carbon-credits" class="footer-nav-link hover:text-[#54a630] transition">CARBON CREDITS</a>
+            <a href="${routeUrl('awd')}" data-nav="awd" class="footer-nav-link hover:text-[#54a630] transition">AWD</a>
+            <a href="${routeUrl('species')}" data-nav="species" class="footer-nav-link hover:text-[#54a630] transition">SPECIES</a>
+            <a href="${routeUrl('new-plantation')}" data-nav="new-plantation" class="footer-nav-link hover:text-[#54a630] transition">PLANTATION</a>
+            <a href="${routeUrl('environment')}" data-nav="environment" class="footer-nav-link hover:text-[#54a630] transition">ENVIRONMENT</a>
+            <a href="${routeUrl('about')}" data-nav="about" class="footer-nav-link hover:text-[#54a630] transition">ABOUT</a>
+            <a href="${routeUrl('gallery')}" data-nav="gallery" class="footer-nav-link hover:text-[#54a630] transition">GALLERY</a>
+            <a href="${routeUrl('news')}" data-nav="news" class="footer-nav-link hover:text-[#54a630] transition">NEWS</a>
+            <a href="${routeUrl('contact')}" data-nav="contact" class="footer-nav-link hover:text-[#54a630] transition">CONTACT</a>
           </nav>
         </div>
 
@@ -296,8 +302,9 @@
         <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11.5px] text-gray-400">
           <div data-cms-key="global.copyright">Copyright © 2026 Sadana Green Society, Kurnool · sadanagreensociety.com</div>
           <div class="flex items-center gap-4">
-            <a href="#privacy" onclick="event.preventDefault(); navigateTo('plantation');" class="hover:text-[#162219] underline transition">Privacy Policy</a>
-            <a href="#terms" onclick="event.preventDefault(); navigateTo('plantation');" class="hover:text-[#162219] underline transition">Terms of Use</a>
+            <a href="${routeUrl('privacy')}" data-nav="privacy" class="hover:text-[#162219] underline transition">Privacy Policy</a>
+            <a href="${routeUrl('terms')}" data-nav="terms" class="hover:text-[#162219] underline transition">Terms of Use</a>
+            <a href="${routeUrl('faq')}" data-nav="faq" class="hover:text-[#162219] underline transition">Bilingual FAQs</a>
             <button type="button" onclick="toggleCmsAdmin(true)" aria-label="CMS Admin Portal" class="hover:text-[#54a630] font-semibold transition flex items-center gap-1 opacity-70 hover:opacity-100 text-[11px]">
               <span>⚙️ Admin Portal</span>
             </button>
@@ -315,7 +322,7 @@
 
         <div>
           <div class="flex items-center gap-3.5 mt-3 mb-9">
-            <img src="images/sgs-logo-clean.png" alt="SGS" class="w-12 h-12 rounded-full object-contain p-0.5 bg-white ring-2 ring-white/20 flex-shrink-0" />
+            <img id="drawer-logo-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="SGS" class="w-12 h-12 rounded-full object-contain p-0.5 bg-white ring-2 ring-white/20 flex-shrink-0" />
             <div class="flex flex-col line-tight text-left">
               <span class="font-extrabold text-lg sm:text-xl tracking-tight text-white leading-tight">Sadana Green Society</span>
               <span class="text-[10px] font-bold text-[#7fd858] uppercase tracking-wider leading-tight">Regd. No. 129/2021 &bull; Kurnool</span>
@@ -400,7 +407,7 @@
           <button type="button" onclick="closeVideoModal()" class="text-gray-400 hover:text-white text-lg leading-none">✕</button>
         </div>
         <div class="relative bg-black flex items-center justify-center overflow-hidden max-h-[75vh]">
-          <img id="video-modal-poster" src="images/template/home-hero-image.webp" alt="Preview" class="w-full h-auto max-h-[75vh] object-contain" />
+          <img id="video-modal-poster" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Preview" class="w-full h-auto max-h-[75vh] object-contain" />
         </div>
       </div>
     </div>
@@ -544,8 +551,8 @@
       gal22: "images/gallery/sgs-activity-22.jpeg",
       gal23: "images/gallery/sgs-activity-23.jpeg",
       gal24: "images/gallery/sgs-activity-24.jpeg",
-      heroAerial: "images/template/home-hero-image.webp",
-      aboutHero: "images/template/about-us-hero-image.webp",
+      heroAerial: "images/hero/environment-hero.jpg",
+      aboutHero: "images/plantation-field-team-hd.jpg",
       servicesHero: "images/template/services-hero-background.webp",
       contactHero: "images/template/contact-us-hero-image.webp",
       greenTractor: "images/template/home-page-grid-image-4.webp",
@@ -1132,7 +1139,7 @@
 
       // Auto-migrate legacy or outdated image keys to raw high-res original assets
       if (!CMS.images.heroAerial || CMS.images.heroAerial.includes("home-nature-bg") || CMS.images.heroAerial.includes("home-hero-bg.jpg")) {
-        CMS.images.heroAerial = "images/template/home-hero-image.webp";
+        CMS.images.heroAerial = "images/hero/environment-hero.jpg";
       }
       if (!CMS.images.logoEmblem || CMS.images.logoEmblem === "images/sgs-official-logo.png") {
         CMS.images.logoEmblem = "images/sgs-logo-clean.png";
@@ -1141,7 +1148,7 @@
         CMS.images.twoFarmersTablet = "images/plantation-field-team-hd.jpg";
       }
       if (!CMS.images.aboutHero || CMS.images.aboutHero.includes("about-hero-bg.jpg")) {
-        CMS.images.aboutHero = "images/template/about-us-hero-image.webp";
+        CMS.images.aboutHero = "images/plantation-field-team-hd.jpg";
       }
       if (!CMS.images.servicesHero || CMS.images.servicesHero.includes("services-hero-bg.jpg")) {
         CMS.images.servicesHero = "images/template/services-hero-background.webp";
@@ -1215,8 +1222,92 @@
       speciesTab: "all" // 'all' | 'forest' | 'fruit'
     };
 
+
+    // =========================================================================
+    // CLEAN URL ROUTING & ASSET RESOLUTION HELPERS
+    // =========================================================================
+    function getBasePrefix() {
+      const p = window.location.pathname;
+      const KNOWN_ROUTES = [
+        "about", "our-journey", "agroforestry", "services", "awd",
+        "carbon-credits", "carbon", "species", "forest", "fruit",
+        "new-plantation", "plantation", "environment", "gallery",
+        "news", "post", "contact", "faq", "faqs", "privacy", "terms", "admin"
+      ];
+      const clean = p.replace(/\/+$/, "");
+      const segs = clean.split("/").filter(Boolean);
+      if (segs.length > 0 && KNOWN_ROUTES.includes(segs[segs.length - 1].toLowerCase())) {
+        segs.pop();
+        return "/" + (segs.length > 0 ? segs.join("/") + "/" : "");
+      }
+      if (p.includes("/sadhana-green-society")) return "/sadhana-green-society/";
+      return "/";
+    }
+
+    function routeUrl(page) {
+      const base = getBasePrefix();
+      if (!page || page === "home") return base;
+      const ALIASES = {
+        "carbon": "carbon-credits",
+        "plantation": "new-plantation",
+        "forest": "species",
+        "fruit": "species",
+        "faqs": "faq"
+      };
+      const clean = ALIASES[page] || page;
+      return base + clean + "/";
+    }
+
+    function resolveAssetUrl(url) {
+      if (!url) return "";
+      if (url.startsWith("data:") || url.startsWith("http://") || url.startsWith("https://") || url.startsWith("//")) {
+        return url;
+      }
+      const base = getBasePrefix();
+      const clean = url.replace(/^\/+/, "");
+      return base + clean;
+    }
+
+    function detectRouteFromUrl() {
+      const p = window.location.pathname.replace(/\/+$/, "");
+      const seg = (p.split("/").pop() || "").toLowerCase();
+      const hash = (window.location.hash || "").replace("#", "").toLowerCase();
+
+      const ROUTE_ALIASES = {
+        "": "home",
+        "home": "home",
+        "about": "about",
+        "our-journey": "our-journey",
+        "agroforestry": "agroforestry",
+        "services": "services",
+        "awd": "awd",
+        "carbon": "carbon-credits",
+        "carbon-credits": "carbon-credits",
+        "species": "species",
+        "forest": "species",
+        "fruit": "species",
+        "new-plantation": "new-plantation",
+        "plantation": "new-plantation",
+        "environment": "environment",
+        "gallery": "gallery",
+        "news": "news",
+        "post": "post",
+        "contact": "contact",
+        "faq": "faq",
+        "faqs": "faq",
+        "privacy": "privacy",
+        "terms": "terms",
+        "admin": "admin"
+      };
+
+      if (ROUTE_ALIASES[seg]) return ROUTE_ALIASES[seg];
+      if (ROUTE_ALIASES[hash]) return ROUTE_ALIASES[hash];
+      return "home";
+    }
+
     function imgUrl(key) {
-      return (CMS.images && CMS.images[key]) || DEFAULT_IMAGES[key] || DEFAULT_IMAGES.heroAerial;
+      let val = (CMS.images && CMS.images[key]) || DEFAULT_IMAGES[key] || DEFAULT_IMAGES.heroAerial;
+      return resolveAssetUrl(val);
     }
 
     function arrowCircleSvg() {
@@ -1282,7 +1373,7 @@
             <!-- Single-Line White Pill Navbar (Exact match to nav bar.jpg) -->
             <div class="bg-white rounded-full px-5 sm:px-7 py-3 shadow-lg flex items-center justify-between gap-4">
               <!-- Left: Compact Single-Line Logo + Official Tagline -->
-              <a href="#home" data-nav="home" class="flex items-center gap-2.5 sm:gap-3 text-[#162219] no-underline flex-shrink-0">
+              <a href="${routeUrl('home')}" data-nav="home" class="flex items-center gap-2.5 sm:gap-3 text-[#162219] no-underline flex-shrink-0">
                 <img data-cms-img="logoEmblem" src="${imgUrl('logoEmblem')}" alt="Sadana Green Society Logo" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-contain p-0.5 bg-white ring-1 ring-gray-200 shadow-sm flex-shrink-0" />
                 <div class="flex flex-col line-tight text-left">
                   <span data-cms-key="global.orgName" class="font-extrabold text-[15px] sm:text-[17px] tracking-tight text-[#162219] leading-tight whitespace-nowrap">${CMS.global.orgName}</span>
@@ -1292,11 +1383,11 @@
 
               <!-- Center: 6 Clean Single-Line Nav Items with 2 Mega Menus (Never wraps!) -->
               <nav class="desktop-nav-links hidden lg:flex items-center gap-7 text-[12px] font-bold tracking-wider uppercase whitespace-nowrap">
-                <a href="#home" data-nav="home" class="${p === 'home' ? activeCls : idleCls} transition">HOME</a>
+                <a href="${routeUrl('home')}" data-nav="home" class="${p === 'home' ? activeCls : idleCls} transition">HOME</a>
 
                 <!-- MEGA MENU 1 TRIGGER: AGROFORESTRY (Hover Open + Click Fallback) -->
                 <div class="relative flex items-center gap-1 py-2 cursor-pointer" onmouseenter="showMegaMenu('agro')" onmouseleave="hideMegaMenu('agro')">
-                  <a href="#services" data-nav="services" class="${isAgroGroup ? activeCls : idleCls} transition flex items-center gap-1">
+                  <a href="${routeUrl('agroforestry')}" data-nav="agroforestry" class="${isAgroGroup ? activeCls : idleCls} transition flex items-center gap-1">
                     <span>AGROFORESTRY</span>
                     <svg id="caret-agro" class="w-3.5 h-3.5 transition-transform ${state.megaMenu === 'agro' ? 'rotate-180' : ''}" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                   </a>
@@ -1304,15 +1395,15 @@
 
                 <!-- MEGA MENU 2 TRIGGER: PROGRAMMES (Hover Open + Click Fallback) -->
                 <div class="relative flex items-center gap-1 py-2 cursor-pointer" onmouseenter="showMegaMenu('prog')" onmouseleave="hideMegaMenu('prog')">
-                  <a href="#carbon" data-nav="carbon" class="${isProgGroup ? activeCls : idleCls} transition flex items-center gap-1">
+                  <a href="${routeUrl('carbon-credits')}" data-nav="carbon-credits" class="${isProgGroup ? activeCls : idleCls} transition flex items-center gap-1">
                     <span>PROGRAMMES</span>
                     <svg id="caret-prog" class="w-3.5 h-3.5 transition-transform ${state.megaMenu === 'prog' ? 'rotate-180' : ''}" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                   </a>
                 </div>
 
-                <a href="#about" data-nav="about" class="${p === 'about' ? activeCls : idleCls} transition">ABOUT</a>
-                <a href="#news" data-nav="news" class="${(p === 'news' || p === 'post') ? activeCls : idleCls} transition">NEWS</a>
-                <a href="#contact" data-nav="contact" class="${p === 'contact' ? activeCls : idleCls} transition">CONTACT</a>
+                <a href="${routeUrl('about')}" data-nav="about" class="${p === 'about' ? activeCls : idleCls} transition">ABOUT</a>
+                <a href="${routeUrl('news')}" data-nav="news" class="${(p === 'news' || p === 'post') ? activeCls : idleCls} transition">NEWS</a>
+                <a href="${routeUrl('contact')}" data-nav="contact" class="${p === 'contact' ? activeCls : idleCls} transition">CONTACT</a>
               </nav>
 
               <!-- Right: Search + Single-Line Green Pill Button -->
@@ -1321,7 +1412,7 @@
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" stroke-linejoin="round" d="M20 20l-3.5-3.5"/></svg>
                 </button>
                 <div class="desktop-cta-wrap hidden md:block">
-                  <button type="button" data-nav="plantation" class="cta-pill">
+                  <button type="button" href="${routeUrl('new-plantation')}" data-nav="new-plantation" class="cta-pill">
                     <span>Get Started</span>
                     ${arrowCircleSvg()}
                   </button>
@@ -1590,8 +1681,8 @@
           <!-- Bottom Partner / Programme Strip (Exact home page.jpg dark translucent bar) -->
           <div class="relative z-10 border-t border-white/10 bg-[#0d1911]/80 backdrop-blur-md py-6">
             <div class="max-w-[1220px] mx-auto px-5 sm:px-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center opacity-80 text-white text-xs font-bold tracking-wider">
-              <a href="#services" data-nav="services" class="flex items-center gap-2 hover:text-[#7fd858] transition no-underline"><span class="w-5 h-5 rounded bg-white/20 flex items-center justify-center">🌱</span><span>Agroforestry</span></a>
-              <a href="#carbon" data-nav="carbon" class="flex items-center gap-2 hover:text-[#7fd858] transition no-underline"><span class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">♻️</span><span>Carbon Credits</span></a>
+              <a href="${routeUrl('agroforestry')}" data-nav="agroforestry" class="flex items-center gap-2 hover:text-[#7fd858] transition no-underline"><span class="w-5 h-5 rounded bg-white/20 flex items-center justify-center">🌱</span><span>Agroforestry</span></a>
+              <a href="${routeUrl('carbon-credits')}" data-nav="carbon-credits" class="flex items-center gap-2 hover:text-[#7fd858] transition no-underline"><span class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">♻️</span><span>Carbon Credits</span></a>
               <a href="#awd" data-nav="awd" class="flex items-center gap-2 hover:text-[#7fd858] transition no-underline"><span class="w-5 h-5 rounded bg-white/20 flex items-center justify-center">💧</span><span>AWD in Paddy</span></a>
               <a href="#forest" data-nav="forest" class="flex items-center gap-2 hover:text-[#7fd858] transition no-underline"><span class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">🌳</span><span>8 Forest Species</span></a>
               <a href="#fruit" data-nav="fruit" class="flex items-center gap-2 hover:text-[#7fd858] transition no-underline"><span class="w-5 h-5 rounded bg-white/20 flex items-center justify-center">🍎</span><span>8 Fruit Species</span></a>
@@ -1731,7 +1822,7 @@
                 </div>
               </div>
 
-              <button type="button" data-nav="plantation" class="cta-pill">
+              <button type="button" href="${routeUrl('new-plantation')}" data-nav="new-plantation" class="cta-pill">
                 <span>Apply for New Plantation</span>
                 ${arrowCircleSvg()}
               </button>
@@ -1748,7 +1839,7 @@
         <!-- SECTION 6: EMPOWERING YOUR FARM WITH EXPERT SOLUTIONS (Exact home page.jpg Dark Green Section) -->
         <section class="relative bg-[#111e15] text-white py-16 lg:py-24 overflow-hidden">
           <div class="absolute inset-0 opacity-15">
-            <img src="images/template/services-hero-background.webp" alt="Dark organic texture" class="w-full h-full object-cover" />
+            <img src="${imgUrl('servicesHero')}" alt="Dark organic texture" class="w-full h-full object-cover" />
           </div>
           <div class="relative z-10 max-w-[1220px] mx-auto px-5 sm:px-8">
             <div class="rg-2 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -1970,7 +2061,7 @@
                   ${CMS.agroforestry.heroSubtitle}
                 </p>
                 <div class="flex flex-wrap gap-3">
-                  <button type="button" data-nav="plantation" class="cta-pill">
+                  <button type="button" href="${routeUrl('new-plantation')}" data-nav="new-plantation" class="cta-pill">
                     <span>Get Started Now</span>
                     ${arrowCircleSvg()}
                   </button>
@@ -2055,7 +2146,7 @@
               </div>
               <div>
                 <div class="text-xs text-gray-500 mb-3">Ready to plant trees on your farmland?</div>
-                <button type="button" data-nav="plantation" class="cta-pill">
+                <button type="button" href="${routeUrl('new-plantation')}" data-nav="new-plantation" class="cta-pill">
                   <span>Get Started Now</span>
                   ${arrowCircleSvg()}
                 </button>
@@ -2134,7 +2225,7 @@
                   </div>
                 `).join('')}
               </div>
-              <button type="button" data-nav="plantation" class="cta-pill">
+              <button type="button" href="${routeUrl('new-plantation')}" data-nav="new-plantation" class="cta-pill">
                 <span>Apply for Agroforestry</span>
                 ${arrowCircleSvg()}
               </button>
@@ -2235,37 +2326,69 @@
     }
 
     // =========================================================================
-    // 3. FOREST SPECIES & FRUIT SPECIES PAGES (Built in Exact Landscape Style)
+    // 3. TREE & FRUIT SPECIES CATALOG PAGE (/species/, /forest/, /fruit/)
     // =========================================================================
-    function renderSpeciesCatalogPage(kind) {
-      const isForest = kind === "forest";
-      const list = isForest ? CMS.forestSpecies : CMS.fruitSpecies;
-      const title = isForest ? "Forest Species for Agroforestry" : "Fruit Species for Agroforestry";
-      const sub = isForest
-        ? "Timber, pulpwood and soil-building trees we promote on farmland, with their benefits, best-fit land and uses."
-        : "Fruit trees for steady income and better nutrition, with their benefits, best-fit land and uses.";
+    function renderSpeciesCatalogPage(kind = "all") {
+      let activeTab = state.speciesTab || kind || "all";
+      if (!["all", "forest", "fruit"].includes(activeTab)) activeTab = "all";
+
+      let list = [];
+      if (activeTab === "forest") list = CMS.forestSpecies;
+      else if (activeTab === "fruit") list = CMS.fruitSpecies;
+      else list = [...CMS.forestSpecies.map(s => Object.assign({}, s, { category: "Forest / Timber" })), ...CMS.fruitSpecies.map(s => Object.assign({}, s, { category: "Fruit / Commercial" }))];
+
+      const title = activeTab === "forest"
+        ? "Forest & Timber Species (8 Trees)"
+        : (activeTab === "fruit" ? "Fruit & Commercial Species (8 Trees)" : "16 Promoted Tree & Fruit Species");
+
+      const sub = activeTab === "forest"
+        ? "High-value timber, pulpwood and soil-building forest trees promoted for field bunds, farm boundaries and block plantations."
+        : (activeTab === "fruit"
+          ? "High-yielding fruit tree varieties tailored for diverse soils across Andhra Pradesh, Telangana, and Karnataka to ensure recurring farmer revenue."
+          : "Complete bilingual directory of 8 timber/forest species and 8 high-yield fruit species promoted by Sadana Green Society for sustainable agroforestry.");
 
       return `
+        <!-- HERO SECTION -->
         <section class="relative bg-[#111e15] text-white pb-16">
           ${renderHeroMediaLayer('heroAerial')}
           ${renderHeader()}
+
           <div class="relative z-10 max-w-[1220px] mx-auto px-5 sm:px-8 pt-14 lg:pt-20">
             <div class="rg-2 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
               <div class="lg:col-span-7">
+                <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-[#7fd858] font-bold text-xs tracking-wider uppercase mb-3">Agroforestry Species Directory</span>
                 <h1 class="hero-title-lg text-4xl sm:text-5xl font-extrabold leading-[1.1] tracking-tight mb-4">${title}</h1>
                 <p class="text-white/80 text-xs sm:text-sm leading-relaxed max-w-xl">${sub}</p>
               </div>
+
               <div class="lg:col-span-5 flex flex-wrap lg:justify-end gap-2.5">
-                <button type="button" data-nav="services" class="cta-pill-dark"><span>Why Agroforestry</span>${arrowCircleSvg()}</button>
-                <button type="button" data-nav="${isForest ? 'fruit' : 'forest'}" class="cta-pill">
-                  <span>Switch to ${isForest ? '8 Fruit Species' : '8 Forest Species'}</span>
+                <button type="button" data-nav="new-plantation" class="cta-pill">
+                  <span>Apply for Saplings</span>
+                  ${arrowCircleSvg()}
+                </button>
+                <button type="button" data-nav="agroforestry" class="cta-pill-dark">
+                  <span>Agroforestry Models</span>
                   ${arrowCircleSvg()}
                 </button>
               </div>
             </div>
+
+            <!-- Tab Switcher (All / Forest / Fruit) -->
+            <div class="flex flex-wrap items-center gap-2.5 pt-8 mt-6 border-t border-white/15">
+              <button type="button" onclick="setSpeciesFilter('all')" class="px-5 py-2.5 rounded-full font-bold text-xs transition ${activeTab === 'all' ? 'bg-[#54a630] text-white shadow-md' : 'bg-white/10 hover:bg-white/20 text-white'}">
+                All 16 Species (16)
+              </button>
+              <button type="button" onclick="setSpeciesFilter('forest')" class="px-5 py-2.5 rounded-full font-bold text-xs transition ${activeTab === 'forest' ? 'bg-[#54a630] text-white shadow-md' : 'bg-white/10 hover:bg-white/20 text-white'}">
+                🌳 8 Forest Species
+              </button>
+              <button type="button" onclick="setSpeciesFilter('fruit')" class="px-5 py-2.5 rounded-full font-bold text-xs transition ${activeTab === 'fruit' ? 'bg-[#54a630] text-white shadow-md' : 'bg-white/10 hover:bg-white/20 text-white'}">
+                🥭 8 Fruit Species
+              </button>
+            </div>
           </div>
         </section>
 
+        <!-- SPECIES DIRECTORY GRID -->
         <section class="py-16 lg:py-24 max-w-[1220px] mx-auto px-5 sm:px-8">
           <div class="flex flex-wrap gap-2 mb-10">
             ${list.map(s => `
@@ -2277,54 +2400,54 @@
 
           <div class="rg-2 grid grid-cols-1 md:grid-cols-2 gap-7">
             ${list.map(s => `
-              <div id="sp-${s.id}" class="soft-card p-7 sm:p-8 flex flex-col justify-between">
+              <div id="sp-${s.id}" class="bg-white rounded-[24px] p-6 sm:p-8 border border-gray-200/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
                 <div>
                   <div class="flex items-start justify-between gap-4 mb-4">
-                    <div class="flex items-center gap-3.5">
-                      <span class="w-12 h-12 rounded-full bg-[#54a630] text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
-                        ${isForest ? '🌳' : '🍎'}
-                      </span>
-                      <div>
-                        <h2 class="text-xl font-extrabold text-[#162219]">${s.name} <span class="text-sm font-bold text-[#54a630] telugu-text">· ${s.telugu}</span></h2>
-                        <div class="text-xs italic text-gray-400">${s.botanical}</div>
+                    <div>
+                      <div class="flex items-center gap-2 mb-1">
+                        <span class="w-8 h-8 rounded-full bg-[#f3f5f3] text-[#54a630] flex items-center justify-center font-extrabold text-xs">
+                          ${s.id}
+                        </span>
+                        <h3 class="text-xl font-extrabold text-[#162219]">${s.name}</h3>
                       </div>
+                      <div class="text-sm font-bold text-[#54a630] telugu-text">${s.telugu}</div>
                     </div>
-                    <button type="button" data-nav="plantation" class="w-8 h-8 rounded-full bg-[#162219] hover:bg-[#54a630] text-white flex items-center justify-center flex-shrink-0 transition" title="Apply for this species">
-                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg>
-                    </button>
+                    <span class="inline-block px-3 py-1 rounded-full bg-[#f3f5f3] text-[#162219] text-[11px] font-bold">
+                      ${s.category || (activeTab === 'forest' ? 'Forest / Timber' : 'Fruit')}
+                    </span>
                   </div>
 
-                  <p class="font-bold text-xs sm:text-[13.5px] text-[#162219] mb-3">${s.summary}</p>
-                  <div class="bg-white rounded-2xl p-4 text-xs text-gray-600 mb-5 border border-gray-200/60">
-                    <strong class="text-[#162219]">Best for:</strong> ${s.bestFor}
+                  <div class="space-y-3 text-xs sm:text-[13px] text-gray-600 mb-6">
+                    <div><strong class="text-[#162219]">Best Fit Land:</strong> ${s.fit}</div>
+                    <div><strong class="text-[#162219]">Maturity / Yield:</strong> ${s.maturity}</div>
+                    <div><strong class="text-[#162219]">Economic Uses:</strong> ${s.uses}</div>
+                    <div><strong class="text-[#162219]">Farmer &amp; Climate Benefits:</strong> ${s.benefits}</div>
                   </div>
-
-                  <ul class="space-y-2.5 text-xs text-gray-600 mb-6">
-                    ${s.benefits.map(b => `
-                      <li class="flex items-start gap-2.5">
-                        <span class="w-4 h-4 rounded bg-[#162219] text-white flex items-center justify-center text-[9px] font-bold flex-shrink-0 mt-0.5">✓</span>
-                        <span>${b}</span>
-                      </li>
-                    `).join('')}
-                  </ul>
                 </div>
 
-                <div>
-                  <div class="flex flex-wrap items-center gap-2 pt-4 border-t border-gray-200/70">
-                    <span class="text-[11px] font-bold text-gray-400 uppercase mr-1">Main uses:</span>
-                    ${s.uses.map(u => `<span class="px-3 py-1 rounded-full bg-white text-[#162219] text-[11px] font-bold border border-gray-200/80">${u}</span>`).join('')}
-                  </div>
-                  ${s.note ? `
-                    <div class="mt-4 bg-white rounded-xl p-3.5 text-[11.5px] text-gray-600 border-l-4 border-[#54a630]">
-                      <strong class="text-[#162219]">Note:</strong> ${s.note}
-                    </div>
-                  ` : ''}
+                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                  <span class="text-[11px] text-gray-500">Promoted across ${CMS.global.workingStates}</span>
+                  <button type="button" data-nav="new-plantation" class="text-xs font-extrabold text-[#54a630] hover:text-[#468e26] flex items-center gap-1">
+                    <span>Request Saplings</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                  </button>
                 </div>
               </div>
             `).join('')}
           </div>
         </section>
       `;
+    }
+
+    function setSpeciesFilter(filter) {
+      state.speciesTab = filter;
+      renderApp();
+      const fl = document.getElementById("footer-logo-img");
+      if (fl) fl.src = imgUrl("logoEmblem");
+      const dl = document.getElementById("drawer-logo-img");
+      if (dl) dl.src = imgUrl("logoEmblem");
+      const vp = document.getElementById("video-modal-poster");
+      if (vp && !vp.src.includes("images")) vp.src = imgUrl("heroAerial");
     }
 
     // =========================================================================
@@ -2352,7 +2475,7 @@
               <div class="lg:col-span-6">
                 <p class="text-white/85 text-xs sm:text-sm leading-relaxed mb-6">${data.whatIsP1} ${data.whatIsP2}</p>
                 <div class="flex flex-wrap gap-3">
-                  <button type="button" data-nav="plantation" class="cta-pill"><span>Enrol Your Farm</span>${arrowCircleSvg()}</button>
+                  <button type="button" href="${routeUrl('new-plantation')}" data-nav="new-plantation" class="cta-pill"><span>Enrol Your Farm</span>${arrowCircleSvg()}</button>
                   <button type="button" data-nav="${isCarbon ? 'awd' : 'carbon'}" class="cta-pill-dark">
                     <span>View ${isCarbon ? 'AWD in Paddy' : 'Carbon Credits'}</span>
                     ${arrowCircleSvg()}
@@ -2688,7 +2811,7 @@
                   Take the first step toward sustainable agroforestry, verified carbon credits, and AWD water conservation. Our team is here to support you every step of the way.
                 </p>
                 <div class="flex flex-wrap items-center gap-4">
-                  <button type="button" data-nav="plantation" class="cta-pill">
+                  <button type="button" href="${routeUrl('new-plantation')}" data-nav="new-plantation" class="cta-pill">
                     <span>Get Started</span>
                     ${arrowCircleSvg()}
                   </button>
@@ -3110,7 +3233,7 @@
               Let's grow a sustainable future together! We're excited to partner with farmers, CSR teams, institutions, and communities across Andhra Pradesh, Telangana and Karnataka.
             </p>
             <div class="flex flex-wrap items-center justify-center gap-4">
-              <button type="button" data-nav="plantation" class="cta-pill">
+              <button type="button" href="${routeUrl('new-plantation')}" data-nav="new-plantation" class="cta-pill">
                 <span>Get Started</span>
                 ${arrowCircleSvg()}
               </button>
@@ -3366,6 +3489,427 @@
               ${arrowCircleSvg()}
             </button>
           </form>
+        </section>
+      `;
+    }
+
+// =========================================================================
+    // 12. OUR JOURNEY & MILESTONES PAGE (/our-journey/)
+    // =========================================================================
+    function renderOurJourneyPage() {
+      const milestones = [
+        {
+          year: "2021",
+          title: "Official Registration & Grassroots Pilot",
+          telugu: "సంస్థ నమోదు & తొలి అడుగులు",
+          desc: "Sadana Green Society was formally registered in Kurnool, Andhra Pradesh (Regd. No. 129/2021 under AP Societies Registration Act). Distributed 25,000 quality timber & fruit saplings across drought-prone farming clusters in Kurnool and Anantapur.",
+          badge: "Regd. No. 129/2021"
+        },
+        {
+          year: "2022",
+          title: "AWD Water-Saving Paddy Innovation",
+          telugu: "వరిలో AWD నీటి పొదుపు విధానం",
+          desc: "Pioneered Alternate Wetting and Drying (AWD) water tubes across paddy belts. Proved 15–30% irrigation water conservation while dramatically reducing baseline anaerobic methane emissions without reducing grain yield.",
+          badge: "Water & Climate"
+        },
+        {
+          year: "2023",
+          title: "Carbon Credit Programme Scaling",
+          telugu: "కార్బన్ క్రెడిట్ ప్రాజెక్ట్ విస్తరణ",
+          desc: "Launched large-scale verified agroforestry carbon credit enrolment across Andhra Pradesh and Telangana. Deployed field teams for digital GPS polygon land survey and transparent farmer record-keeping.",
+          badge: "50,000+ Enrolled"
+        },
+        {
+          year: "2024",
+          title: "Tri-State Expansion into Karnataka",
+          telugu: "కర్ణాటకకు విస్తరణ & 16 జాతులు",
+          desc: "Expanded into Karnataka dryland farming regions (Raichur, Bellary, Koppal). Established high-survival nursery supply networks covering 16 tailored timber and fruit tree species.",
+          badge: "AP • TG • KA"
+        },
+        {
+          year: "2025–2026",
+          title: "1,20,000+ Farmers & Digital Monitoring",
+          telugu: "1,20,000+ రైతులు & డిజిటల్ వ్యవస్థ",
+          desc: "Achieved 1,20,000+ enrolled agroforestry farmers and 5,000+ AWD paddy farmers across 45,000+ acres. Implemented continuous satellite, drone and ground-truth measurement audits for verified carbon issuance.",
+          badge: "Current Milestone"
+        }
+      ];
+
+      return `
+        <!-- HERO SECTION -->
+        <section class="relative bg-[#132217] text-white pb-16">
+          ${renderHeroMediaLayer('aboutHero')}
+          ${renderHeader()}
+
+          <div class="relative z-10 max-w-[1220px] mx-auto px-5 sm:px-8 pt-14 lg:pt-20">
+            <div class="rg-2 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
+              <div class="lg:col-span-7">
+                <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-3.5 py-1 text-xs font-semibold mb-4 text-[#7fd858]">
+                  <span>ESTD. 2021 &bull; KURNOOL, ANDHRA PRADESH</span>
+                </div>
+                <h1 class="hero-title-lg text-4xl sm:text-5xl lg:text-[52px] font-extrabold leading-[1.1] tracking-tight mb-4">
+                  Our Journey <span class="text-white/60">&amp; Milestones</span>
+                </h1>
+                <p class="text-white/85 text-xs sm:text-sm leading-relaxed max-w-xl">
+                  From a humble farmer collective in Kurnool to a registered environmental society empowering over 1,20,000 farming families across Andhra Pradesh, Telangana, and Karnataka with agroforestry and water conservation.
+                </p>
+              </div>
+
+              <div class="lg:col-span-5 flex flex-wrap lg:justify-end gap-3">
+                <button type="button" data-nav="new-plantation" class="cta-pill">
+                  <span>Apply for New Plantation</span>
+                  ${arrowCircleSvg()}
+                </button>
+                <button type="button" data-nav="about" class="cta-pill-dark">
+                  <span>About Our Society</span>
+                  ${arrowCircleSvg()}
+                </button>
+              </div>
+            </div>
+
+            <!-- Impact Summary Strip -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-white/15">
+              <div class="frosted-dark rounded-2xl p-4 text-center">
+                <div class="text-2xl sm:text-3xl font-extrabold text-[#7fd858]">2021</div>
+                <div class="text-[11px] text-white/80 font-medium">Year Registered (129/2021)</div>
+              </div>
+              <div class="frosted-dark rounded-2xl p-4 text-center">
+                <div class="text-2xl sm:text-3xl font-extrabold text-white">1,20,000+</div>
+                <div class="text-[11px] text-white/80 font-medium">Agroforestry Farmers</div>
+              </div>
+              <div class="frosted-dark rounded-2xl p-4 text-center">
+                <div class="text-2xl sm:text-3xl font-extrabold text-[#7fd858]">3 States</div>
+                <div class="text-[11px] text-white/80 font-medium">AP, Telangana &amp; Karnataka</div>
+              </div>
+              <div class="frosted-dark rounded-2xl p-4 text-center">
+                <div class="text-2xl sm:text-3xl font-extrabold text-white">16 Species</div>
+                <div class="text-[11px] text-white/80 font-medium">Timber &amp; Fruit Trees</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 1: THE FOUNDING VISION (B. Raghu Bhaskar & Grassroots Need) -->
+        <section class="py-16 lg:py-24 max-w-[1220px] mx-auto px-5 sm:px-8">
+          <div class="rg-2 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            <div class="lg:col-span-6">
+              <div class="relative rounded-[26px] overflow-hidden shadow-lg h-[380px] sm:h-[450px]">
+                <img src="${imgUrl('fieldManFarmer')}" alt="Sadana Green Society Field Leadership" class="w-full h-full object-cover" />
+                <div class="absolute inset-x-4 bottom-4 frosted-dark rounded-2xl p-4 sm:p-5 flex items-center gap-4 text-white">
+                  <img src="${imgUrl('founder')}" alt="${CMS.global.founderName}" class="w-12 h-12 rounded-full object-cover ring-2 ring-white/50 flex-shrink-0" />
+                  <div>
+                    <p class="text-xs text-white/95 leading-relaxed italic mb-1">
+                      "${CMS.about.missionText}"
+                    </p>
+                    <div class="text-[11px] font-bold text-[#7fd858]">${CMS.global.founderName} — Founder &amp; President</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 space-y-5">
+              <span class="inline-block px-3 py-1 rounded-full bg-[#f3f5f3] text-[#54a630] font-extrabold text-[11px] tracking-wider uppercase">How It All Began</span>
+              <h2 class="section-title-lg text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#162219] leading-snug">
+                Turning Vulnerable Drylands into <span class="muted-heading">Resilient, Carbon-Earning Farmlands</span>
+              </h2>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                Agriculture in the semi-arid regions of Rayalaseema, Southern Telangana, and Northern Karnataka has long suffered from irregular monsoons, fast-depleting ground water, and market price shocks on conventional single-crop seasons.
+              </p>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                Sadana Green Society was created on a single, powerful premise: <strong>Farmers do not need to abandon farming; they need tree diversification on bunds, water-saving irrigation, and additional income streams.</strong> By introducing timber and fruit trees on field bunds and linking tree biomass to verified international carbon registries, we ensure farmers earn while protecting their soil and local climate.
+              </p>
+              <div class="pt-2">
+                <button type="button" data-nav="species" class="cta-pill">
+                  <span>Explore 16 Promoted Tree Species</span>
+                  ${arrowCircleSvg()}
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: YEAR-BY-YEAR MILESTONES TIMELINE -->
+        <section class="py-16 lg:py-24 bg-[#f8f9f8] border-y border-gray-200/70">
+          <div class="max-w-[1220px] mx-auto px-5 sm:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+              <span class="inline-block px-3 py-1 rounded-full bg-white text-[#54a630] font-extrabold text-[11px] tracking-wider uppercase shadow-sm mb-3">Historical Timeline</span>
+              <h2 class="section-title-lg text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#162219] leading-snug mb-4">
+                Milestones Along Our <span class="muted-heading">Growth Journey</span>
+              </h2>
+              <p class="text-xs sm:text-sm text-gray-500 leading-relaxed">
+                Key steps taken with farming communities from initial tree nursery setups in 2021 to high-tech digital field monitoring today.
+              </p>
+            </div>
+
+            <div class="space-y-6 max-w-3xl mx-auto">
+              ${milestones.map((m, idx) => `
+                <div class="bg-white rounded-[24px] p-6 sm:p-8 border border-gray-200/80 shadow-sm hover:shadow-md transition flex flex-col sm:flex-row gap-6 items-start">
+                  <div class="flex sm:flex-col items-center sm:items-start justify-between w-full sm:w-36 flex-shrink-0">
+                    <span class="text-3xl font-extrabold text-[#54a630] tracking-tight">${m.year}</span>
+                    <span class="inline-block px-2.5 py-1 rounded-full bg-[#f3f5f3] text-[#162219] font-bold text-[10.5px] mt-1">${m.badge}</span>
+                  </div>
+                  <div class="flex-1 space-y-2">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <h3 class="text-lg font-extrabold text-[#162219]">${m.title}</h3>
+                      <span class="text-xs font-semibold text-[#54a630] telugu-text">(${m.telugu})</span>
+                    </div>
+                    <p class="text-xs text-gray-600 leading-relaxed">${m.desc}</p>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3: THE 4 PILLARS OF OUR SUCCESS -->
+        <section class="py-16 lg:py-24 max-w-[1220px] mx-auto px-5 sm:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-14">
+            <h2 class="section-title-lg text-2xl sm:text-3xl font-extrabold text-[#162219] leading-snug mb-4">
+              Built on 4 Grounded <span class="muted-heading">Principles</span>
+            </h2>
+            <p class="text-xs text-gray-500 leading-relaxed">Everything Sadana Green Society undertakes adheres to these non-negotiable community commitments.</p>
+          </div>
+
+          <div class="rg-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            ${[
+              { title: "Field-First Presence", icon: "🌱", desc: "No middle agents. SGS field coordinators visit farmers on their own land, map GPS boundaries, and inspect sapling survival in person." },
+              { title: "Carbon Transparency", icon: "📊", desc: "Strict adherence to Gold Standard and Verra methodologies with independent third-party validation and direct revenue-sharing." },
+              { title: "Water & Soil Health", icon: "💧", desc: "AWD paddy monitoring tubes and nitrogen-fixing tree species enrich topsoil and conserve vital groundwater tables." },
+              { title: "Farmer Ownership", icon: "🤝", desc: "All timber, fruit, and agricultural produce remain 100% the property of the farmer. SGS provides inputs, audits, and registry access." }
+            ].map(p => `
+              <div class="soft-card p-6 rounded-[22px] flex flex-col justify-between">
+                <div>
+                  <div class="text-3xl mb-4">${p.icon}</div>
+                  <h3 class="font-extrabold text-base text-[#162219] mb-2">${p.title}</h3>
+                  <p class="text-xs text-gray-500 leading-relaxed">${p.desc}</p>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </section>
+
+        <!-- SECTION 4: CALL TO ACTION -->
+        <section class="relative bg-[#111e15] text-white py-16 lg:py-20 overflow-hidden text-center">
+          <div class="absolute inset-0 opacity-20">
+            <img src="${imgUrl('windBanner')}" alt="Green field banner" class="w-full h-full object-cover" />
+          </div>
+          <div class="relative z-10 max-w-2xl mx-auto px-5 sm:px-8">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-4">Be Part of Our Next Chapter</h2>
+            <p class="text-xs sm:text-sm text-white/80 leading-relaxed mb-8">
+              Whether you are a farming family looking to plant trees and save water, an institutional partner, or a CSR supporter, join Sadana Green Society in building greener land and stronger livelihoods.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+              <button type="button" data-nav="new-plantation" class="cta-pill">
+                <span>Apply for New Plantation</span>
+                ${arrowCircleSvg()}
+              </button>
+              <button type="button" data-nav="contact" class="cta-pill-dark">
+                <span>Contact Our Field Office</span>
+                ${arrowCircleSvg()}
+              </button>
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
+// =========================================================================
+    // 13. PRIVACY POLICY PAGE (/privacy/)
+    // =========================================================================
+    function renderPrivacyPage() {
+      return `
+        <!-- HERO SECTION -->
+        <section class="relative bg-[#132217] text-white pb-16">
+          ${renderHeroMediaLayer('aboutHero')}
+          ${renderHeader()}
+
+          <div class="relative z-10 max-w-[1220px] mx-auto px-5 sm:px-8 pt-14 lg:pt-20">
+            <div class="max-w-3xl">
+              <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-[#7fd858] font-bold text-xs tracking-wider uppercase mb-4">Official Policy &bull; SGS Trust &bull; Kurnool</span>
+              <h1 class="hero-title-lg text-3xl sm:text-5xl font-extrabold leading-tight mb-4">
+                Privacy Policy &amp; Farmer Data Protection
+              </h1>
+              <p class="text-white/85 text-xs sm:text-sm leading-relaxed">
+                Sadana Green Society (Regd. No. 129/2021) is dedicated to protecting the privacy, identity, land records, and GPS survey data of all participating farmers, partners, and community members.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- PRIVACY POLICY BODY -->
+        <section class="py-16 lg:py-20 max-w-[960px] mx-auto px-5 sm:px-8 text-[#162219]">
+          <div class="bg-white rounded-[26px] p-6 sm:p-12 border border-gray-200/80 shadow-sm space-y-10 text-xs sm:text-[13.5px] leading-relaxed text-gray-700">
+            <div>
+              <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest block mb-1">Effective: November 2026 &bull; Regd. No. 129/2021</span>
+              <h2 class="text-xl sm:text-2xl font-extrabold text-[#162219] mb-4">1. Data Controller &amp; Organization Identity</h2>
+              <p>
+                Sadana Green Society ("SGS", "we", "our") is a non-profit organization registered under the Andhra Pradesh Societies Registration Act, 2001 (Registration No. 129/2021), headquartered in Kurnool, Andhra Pradesh, India. Founder &amp; President: B. Raghu Bhaskar.
+              </p>
+              <p class="mt-2">
+                This Privacy Policy outlines how we collect, store, verify, and protect information collected through our field programmes, online portal, and mobile monitoring applications across Andhra Pradesh, Telangana, and Karnataka.
+              </p>
+            </div>
+
+            <div class="border-t border-gray-100 pt-8">
+              <h2 class="text-xl sm:text-2xl font-extrabold text-[#162219] mb-4">2. Categories of Information We Collect</h2>
+              <div class="space-y-4">
+                <div class="bg-[#f8f9f8] p-4 rounded-xl">
+                  <strong class="text-[#162219] block mb-1">A. Farmer Personal Identification:</strong>
+                  Full name, father's or spouse's name, mobile/WhatsApp telephone number, village, mandal, district, and government identification (Aadhaar or voter ID) required for authentic farmer registry and Direct Benefit Transfer (DBT).
+                </div>
+                <div class="bg-[#f8f9f8] p-4 rounded-xl">
+                  <strong class="text-[#162219] block mb-1">B. Land &amp; Agricultural Records:</strong>
+                  Survey number, sub-division, land title / patta passbook details, farm acreage, soil classification, baseline crops, and existing tree counts.
+                </div>
+                <div class="bg-[#f8f9f8] p-4 rounded-xl">
+                  <strong class="text-[#162219] block mb-1">C. Geospatial &amp; Field Monitoring Data:</strong>
+                  High-precision GPS polygon coordinates of farm boundaries, geotagged plantation sapling photographs, drone imagery, and field inspection verification logs.
+                </div>
+                <div class="bg-[#f8f9f8] p-4 rounded-xl">
+                  <strong class="text-[#162219] block mb-1">D. AWD &amp; Carbon Verification Logs:</strong>
+                  Paddy water level tube readings, sapling growth &amp; girth measurements, and biomass calculations for carbon credit validation under international methodologies.
+                </div>
+              </div>
+            </div>
+
+            <div class="border-t border-gray-100 pt-8">
+              <h2 class="text-xl sm:text-2xl font-extrabold text-[#162219] mb-4">3. Purposes of Data Processing</h2>
+              <p>Farmer and community information is collected and processed exclusively for legitimate agricultural and environmental programme purposes:</p>
+              <ul class="list-disc pl-5 mt-3 space-y-2">
+                <li>Validating carbon offset eligibility under certified global registries (including Gold Standard and Verra VCS).</li>
+                <li>Supplying tailored timber and fruit tree saplings from certified nurseries directly to farmer fields.</li>
+                <li>Installing AWD water measurement tubes and training farmers in water management.</li>
+                <li>Disbursing verified carbon credit revenues and direct support payments directly into farmer bank accounts.</li>
+                <li>Providing SMS and WhatsApp agronomic advisories, weather updates, and sapling survival monitoring.</li>
+              </ul>
+            </div>
+
+            <div class="border-t border-gray-100 pt-8">
+              <h2 class="text-xl sm:text-2xl font-extrabold text-[#162219] mb-4">4. Strict Non-Commercial Data Pledge</h2>
+              <div class="bg-[#ebfaeb] border border-[#54a630]/30 rounded-2xl p-5 text-[#162219]">
+                <strong class="block text-sm font-extrabold text-[#3b7c20] mb-1">Our Core Commitment to Farmers:</strong>
+                Sadana Green Society does <strong>NEVER</strong> sell, rent, lease, trade, or distribute farmer personal details, phone numbers, or land survey data to commercial telemarketers, credit agencies, or advertising firms. All records remain protected under non-profit community trust.
+              </div>
+            </div>
+
+            <div class="border-t border-gray-100 pt-8">
+              <h2 class="text-xl sm:text-2xl font-extrabold text-[#162219] mb-4">5. Security, Storage &amp; Field Staff Protocol</h2>
+              <p>
+                All digital field records are encrypted at rest and in transit. SGS field officers access only the records for their designated mandal or cluster. Offline paper enrolment sheets are securely transferred to the Kurnool administrative office for digitisation and archived in locked facilities.
+              </p>
+            </div>
+
+            <div class="border-t border-gray-100 pt-8">
+              <h2 class="text-xl sm:text-2xl font-extrabold text-[#162219] mb-4">6. Farmer Rights &amp; Voluntary Participation</h2>
+              <p>
+                Enrolment in any SGS programme is 100% voluntary. Farmers have the full right to:
+              </p>
+              <ul class="list-disc pl-5 mt-2 space-y-1.5">
+                <li>Inspect and request a copy of their land and sapling records held by SGS.</li>
+                <li>Correct or update their contact or banking details at any time.</li>
+                <li>Withdraw from future programme cycles prior to credit issuance.</li>
+              </ul>
+            </div>
+
+            <div class="border-t border-gray-100 pt-8">
+              <h2 class="text-xl sm:text-2xl font-extrabold text-[#162219] mb-4">7. Grievance Redressal &amp; Contact</h2>
+              <p>For any questions, data corrections, or privacy inquiries, please contact our designated Grievance Officer:</p>
+              <div class="mt-4 p-5 bg-[#f8f9f8] rounded-2xl space-y-1">
+                <div class="font-bold text-[#162219]">B. Raghu Bhaskar &bull; President, Sadana Green Society</div>
+                <div>Regd. No. 129/2021 &bull; Kurnool, Andhra Pradesh, India</div>
+                <div>Phone: +91 94904 05671 &bull; WhatsApp: +91 94904 05671</div>
+                <div>Email: sadanagreensociety@gmail.com</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
+    // =========================================================================
+    // 14. TERMS OF USE & PROGRAMME CONDITIONS PAGE (/terms/)
+    // =========================================================================
+    function renderTermsPage() {
+      return `
+        <!-- HERO SECTION -->
+        <section class="relative bg-[#132217] text-white pb-16">
+          ${renderHeroMediaLayer('aboutHero')}
+          ${renderHeader()}
+
+          <div class="relative z-10 max-w-[1220px] mx-auto px-5 sm:px-8 pt-14 lg:pt-20">
+            <div class="max-w-3xl">
+              <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-[#7fd858] font-bold text-xs tracking-wider uppercase mb-4">Legal Notice &bull; Programme Standards &bull; Kurnool</span>
+              <h1 class="hero-title-lg text-3xl sm:text-5xl font-extrabold leading-tight mb-4">
+                Terms of Use &amp; Programme Norms
+              </h1>
+              <p class="text-white/85 text-xs sm:text-sm leading-relaxed">
+                Transparency standards, participation rules, and legal conditions governing agroforestry, AWD water-saving, and carbon credit programmes conducted by Sadana Green Society.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- TERMS BODY -->
+        <section class="py-16 lg:py-20 max-w-[960px] mx-auto px-5 sm:px-8 text-[#162219]">
+          <div class="bg-white rounded-[26px] p-6 sm:p-12 border border-gray-200/80 shadow-sm space-y-10 text-xs sm:text-[13.5px] leading-relaxed text-gray-700">
+            <div>
+              <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest block mb-1">Effective: November 2026 &bull; Regd. No. 129/2021</span>
+              <h2 class="text-xl sm:text-2xl font-extrabold text-[#162219] mb-4">1. Non-Profit Society Status</h2>
+              <p>
+                Sadana Green Society is a legally registered voluntary non-governmental society under the Andhra Pradesh Societies Registration Act, 2001 (Registration No. 129/2021), with its headquarters located in Kurnool, Andhra Pradesh, India.
+              </p>
+              <p class="mt-2">
+                All activities conducted by SGS are focused exclusively on environmental conservation, farmer livelihood improvement, sustainable agroforestry, and verified climate change mitigation across Andhra Pradesh, Telangana, and Karnataka.
+              </p>
+            </div>
+
+            <div class="border-t border-gray-100 pt-8">
+              <h2 class="text-xl sm:text-2xl font-extrabold text-[#162219] mb-4">2. Strict Zero-Fee Policy / No Advance Charges</h2>
+              <div class="bg-[#ebfaeb] border border-[#54a630]/30 rounded-2xl p-5 text-[#162219]">
+                <strong class="block text-sm font-extrabold text-[#3b7c20] mb-1">Warning Against Unauthorized Fee Collection:</strong>
+                Sadana Green Society <strong>DOES NOT</strong> charge farmers any enrolment fee, application fee, or processing fee to join our agroforestry or AWD programmes. Field officers are strictly forbidden from accepting cash or personal gifts. Any demand for cash by anyone claiming to represent SGS must be immediately reported to our Kurnool office at +91 94904 05671.
+              </div>
+            </div>
+
+            <div class="border-t border-gray-100 pt-8">
+              <h2 class="text-xl sm:text-2xl font-extrabold text-[#162219] mb-4">3. Agroforestry &amp; Tree Plantation Conditions</h2>
+              <ul class="list-disc pl-5 space-y-2">
+                <li><strong>Tree &amp; Produce Ownership:</strong> All trees planted on the farmer's land remain the sole and exclusive property of the landowner/farmer. All harvests, fruits, timber revenue, and agricultural crops belong entirely to the farming family.</li>
+                <li><strong>Farmer Stewardship Commitment:</strong> Enrolled farmers agree to provide reasonable care to saplings, including initial watering and protection from grazing animals, to ensure healthy field survival.</li>
+                <li><strong>Verification Access:</strong> Farmers agree to allow authorized SGS field coordinators and third-party carbon auditors to inspect, count, and measure trees during scheduled field visits.</li>
+              </ul>
+            </div>
+
+            <div class="border-t border-gray-100 pt-8">
+              <h2 class="text-xl sm:text-2xl font-extrabold text-[#162219] mb-4">4. AWD (Alternate Wetting &amp; Drying) Conditions</h2>
+              <p>
+                Farmers enrolling in the AWD paddy programme agree to install perforated water level monitoring tubes supplied by SGS, monitor water levels during the vegetative growth cycle, and allow the water depth to subside to approximately 15 cm below ground level before re-flooding, thereby conserving irrigation water and reducing methane emissions.
+              </p>
+            </div>
+
+            <div class="border-t border-gray-100 pt-8">
+              <h2 class="text-xl sm:text-2xl font-extrabold text-[#162219] mb-4">5. Carbon Credit Disclosures &amp; Financial Terms</h2>
+              <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 space-y-2">
+                <p><strong>Independent Verification Required:</strong> Carbon credits are generated strictly based on actual, verified biomass growth and water reductions certified by independent international auditing bodies.</p>
+                <p><strong>Market-Based Pricing:</strong> Carbon credit prices are determined by international carbon market dynamics and may rise or fall. <em>Sadana Green Society makes no promise or guarantee of fixed monetary earnings.</em></p>
+                <p><strong>Direct Benefit Sharing:</strong> Net proceeds from verified carbon credit sales are shared directly with farming families in accordance with the project agreement executed with each farmer.</p>
+              </div>
+            </div>
+
+            <div class="border-t border-gray-100 pt-8">
+              <h2 class="text-xl sm:text-2xl font-extrabold text-[#162219] mb-4">6. Intellectual Property &amp; Website Usage</h2>
+              <p>
+                Content published on this website, including educational farmer guides, Telugu translations, photographs, and logos, is the property of Sadana Green Society. Community members and educational institutions may share this content for non-commercial educational purposes with clear attribution.
+              </p>
+            </div>
+
+            <div class="border-t border-gray-100 pt-8">
+              <h2 class="text-xl sm:text-2xl font-extrabold text-[#162219] mb-4">7. Governing Law &amp; Jurisdiction</h2>
+              <p>
+                These terms, and all programmes conducted by Sadana Green Society, are governed by the laws of India and the state of Andhra Pradesh. Any disputes arising in connection with SGS shall be subject to the exclusive jurisdiction of the competent courts in <strong>Kurnool, Andhra Pradesh, India</strong>.
+              </p>
+            </div>
+          </div>
         </section>
       `;
     }
@@ -3993,16 +4537,20 @@
       if (!mount) return;
 
       const p = state.currentPage;
-      if (p === "home" || p === "impact") mount.innerHTML = renderHomePage();
-      else if (p === "services") mount.innerHTML = renderServicesPage();
+      if (p === "home" || p === "impact" || p === "") mount.innerHTML = renderHomePage();
+      else if (p === "about") mount.innerHTML = renderAboutPage();
+      else if (p === "our-journey") mount.innerHTML = renderOurJourneyPage();
+      else if (p === "agroforestry" || p === "services") mount.innerHTML = renderServicesPage();
+      else if (p === "awd") mount.innerHTML = renderCarbonOrAwdPage("awd");
+      else if (p === "carbon-credits" || p === "carbon") mount.innerHTML = renderCarbonOrAwdPage("carbon");
+      else if (p === "species") mount.innerHTML = renderSpeciesCatalogPage(state.speciesTab || "all");
       else if (p === "forest") mount.innerHTML = renderSpeciesCatalogPage("forest");
       else if (p === "fruit") mount.innerHTML = renderSpeciesCatalogPage("fruit");
-      else if (p === "carbon") mount.innerHTML = renderCarbonOrAwdPage("carbon");
-      else if (p === "awd") mount.innerHTML = renderCarbonOrAwdPage("awd");
+      else if (p === "new-plantation" || p === "plantation") mount.innerHTML = renderPlantationPage();
       else if (p === "environment") mount.innerHTML = renderEnvironmentPage();
-      else if (p === "about") mount.innerHTML = renderAboutPage();
+      else if (p === "privacy") mount.innerHTML = renderPrivacyPage();
+      else if (p === "terms") mount.innerHTML = renderTermsPage();
       else if (p === "gallery") mount.innerHTML = renderGalleryPage();
-      else if (p === "plantation") mount.innerHTML = renderPlantationPage();
       else if (p === "news") mount.innerHTML = renderNewsPage();
       else if (p === "post") mount.innerHTML = renderSinglePostPage();
       else if (p === "contact" || p === "faq") mount.innerHTML = renderContactPage();
@@ -4049,14 +4597,37 @@
       setCmsValueByPath(path, val);
     }
 
-    function navigateTo(page) {
-      state.currentPage = page;
+    function navigateTo(page, pushState = true) {
+      const ALIASES = {
+        "carbon": "carbon-credits",
+        "plantation": "new-plantation",
+        "faqs": "faq",
+        "forest": "species",
+        "fruit": "species"
+      };
+      if (page === "forest") state.speciesTab = "forest";
+      else if (page === "fruit") state.speciesTab = "fruit";
+      else if (page === "species" && !state.speciesTab) state.speciesTab = "all";
+
+      const normalized = ALIASES[page] || page;
+      state.currentPage = normalized;
       state.megaMenu = null;
-      if (page !== "admin") {
+
+      if (normalized === "admin") {
+        toggleCmsAdmin(true);
+      } else {
         state.cmsOpen = false;
         const modal = document.getElementById("cms-admin-modal");
         if (modal) modal.classList.add("hidden");
       }
+
+      if (pushState && window.history && window.history.pushState) {
+        const targetUrl = routeUrl(normalized);
+        if (window.location.pathname !== targetUrl) {
+          window.history.pushState({ page: normalized }, "", targetUrl);
+        }
+      }
+
       renderApp();
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -4696,26 +5267,22 @@
       }
     });
 
-    // Hash change routing support
-    window.addEventListener("hashchange", function() {
-      const h = (window.location.hash || "").replace("#", "");
-      if (h === "admin") {
-        toggleCmsAdmin(true);
-        return;
-      }
-      toggleCmsAdmin(false);
-      if (["home", "about", "services", "forest", "fruit", "carbon", "awd", "environment", "impact", "gallery", "plantation", "news", "post", "faq", "contact"].includes(h) && state.currentPage !== h) {
-        navigateTo(h);
-      }
+    // Clean URL Popstate & Hash Support
+    window.addEventListener("popstate", function(e) {
+      const page = (e.state && e.state.page) || detectRouteFromUrl();
+      navigateTo(page, false);
     });
 
-    // Initialize on load
+    window.addEventListener("hashchange", function() {
+      const h = (window.location.hash || "").replace("#", "");
+      if (h) navigateTo(h, false);
+    });
+
     // Escape key handler to close any active modal
     window.addEventListener("keydown", function(e) {
-      // Keyboard shortcut: Alt+A or Ctrl+Shift+A opens CMS Admin
       if ((e.altKey && e.key.toLowerCase() === "a") || (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "a")) {
         e.preventDefault();
-        toggleCmsAdmin(true);
+        navigateTo("admin");
       }
       if (e.key === "Escape") {
         closeVideoModal();
@@ -4728,13 +5295,8 @@
     });
 
     window.addEventListener("DOMContentLoaded", function() {
-      const h = (window.location.hash || "").replace("#", "");
-      if (h === "admin") {
-        toggleCmsAdmin(true);
-      } else if (["home", "about", "services", "forest", "fruit", "carbon", "awd", "environment", "impact", "gallery", "plantation", "news", "post", "faq", "contact"].includes(h)) {
-        state.currentPage = h;
-      }
-      renderApp();
+      const page = window.INITIAL_ROUTE || detectRouteFromUrl();
+      navigateTo(page, false);
     });
   </script>
 </body>
